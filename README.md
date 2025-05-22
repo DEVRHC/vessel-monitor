@@ -1,5 +1,3 @@
-# vessel-monitor
-
 # 🚢 Vessel Monitor — Monitoramento Inteligente de Navios
 
 **Vessel Monitor** é um sistema inteligente de monitoramento de navios que coleta e acompanha em tempo real a posição de embarcações listadas no site oficial da [RG Pilots](https://www.rgpilots.com.br/).  
