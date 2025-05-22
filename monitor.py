@@ -4,52 +4,62 @@ import threading
 import time
 import os
 
-URL = "https://www.rgpilots.com.br/"
+PAGINAS = {
+    "aguardados": "https://www.rgpilots.com.br/aguardados",
+    "fundeados": "https://www.rgpilots.com.br/fundeados",
+    "atracados": "https://www.rgpilots.com.br/atracados"
+}
+
 estado_arquivo = "ultimo_estado.txt"
-navio_monitorado = ""
 monitorando = False
+navio_monitorado = ""
 
-def buscar_info(navio):
-    try:
-        response = requests.get(URL)
-        soup = BeautifulSoup(response.content, "html.parser")
-        linhas = soup.find_all("tr")
+def buscar_info_em_paginas(navio):
+    resultados = []
+    for status, url in PAGINAS.items():
+        try:
+            response = requests.get(url)
+            soup = BeautifulSoup(response.content, "html.parser")
+            linhas = soup.find_all("tr")
 
-        for linha in linhas:
-            if navio.lower() in linha.text.lower():
-                return linha.text.strip()
-    except Exception as e:
-        print(f"Erro: {e}")
-    return None
+            for linha in linhas:
+                if navio.lower() in linha.text.lower():
+                    resultados.append((status.upper(), linha.text.strip()))
+        except Exception as e:
+            print(f"[ERRO] Falha ao acessar {url}: {e}")
+    return resultados
 
 def salvar_estado(info):
-    with open(estado_arquivo, "w") as f:
+    with open(estado_arquivo, "w", encoding="utf-8") as f:
         f.write(info)
 
 def carregar_estado():
     if os.path.exists(estado_arquivo):
-        with open(estado_arquivo, "r") as f:
+        with open(estado_arquivo, "r", encoding="utf-8") as f:
             return f.read()
     return ""
 
 def verificar_atividade():
     global navio_monitorado
-    info = buscar_info(navio_monitorado)
-    if not info:
+    resultados = buscar_info_em_paginas(navio_monitorado)
+    if not resultados:
+        print("Navio não encontrado em nenhuma página.")
         return
 
-    anterior = carregar_estado()
-    if info != anterior:
-        print("Mudança detectada!")
-        salvar_estado(info)
-        # Aqui você poderia chamar notificação
+    estado_atual = "\n".join([f"[{status}] {info}" for status, info in resultados])
+    estado_anterior = carregar_estado()
+
+    if estado_atual != estado_anterior:
+        print("🔔 Mudança detectada!")
+        salvar_estado(estado_atual)
+        # Aqui pode chamar notificação
     else:
-        print("Sem mudanças.")
+        print("Sem mudanças nas posições do navio.")
 
 def loop_monitoramento():
     while monitorando:
         verificar_atividade()
-        time.sleep(300)  # 5 minutos
+        time.sleep(300)  # Verifica a cada 5 minutos
 
 def iniciar_monitoramento(navio):
     global navio_monitorado, monitorando
