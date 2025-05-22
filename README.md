@@ -89,6 +89,7 @@ Gráficos e relatórios de movimentações
    git clone https://github.com/DEVRHC/vessel-monitor.git
    cd vessel-monitor
    pip install -r requirements.txt
+   python app.py
 ```
    ---
 
