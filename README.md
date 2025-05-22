@@ -33,5 +33,5 @@ Ideal para agências marítimas, operadores portuários ou entusiastas que desej
 
 1. Clone o repositório:
    ```bash
-   git clone 
-   cd 
+   git clone https://github.com/DEVRHC/vessel-monitor.git
+   cd vessel-monitor
