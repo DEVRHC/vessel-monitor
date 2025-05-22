@@ -20,6 +20,20 @@ Ideal para agências marítimas, operadores portuários ou entusiastas que desej
 
 ---
 
+## 🛠️ Estrutura do Projeto
+
+vessel-monitor/
+├── app.py                # Aplicação Flask
+├── monitor.py            # Lógica de scraping e monitoramento
+├── templates/
+│   └── index.html        # Interface HTML
+├── static/
+│   └── style.css         # Estilo da interface
+├── ultimo_estado.txt     # Registro de última verificação
+└── README.md
+
+---
+
 ## 💻 Tecnologias Utilizadas
 
 - **Python 3**
