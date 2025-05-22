@@ -22,16 +22,18 @@ Ideal para agências marítimas, operadores portuários ou entusiastas que desej
 
 ## 🛠️ Estrutura do Projeto
 
+```bash
 vessel-monitor/
-├── app.py                # Aplicação Flask
-├── monitor.py            # Lógica de scraping e monitoramento
+├── app.py             # Aplicação Flask principal
+├── monitor.py         # Lógica de scraping e monitoramento
 ├── templates/
-│   └── index.html        # Interface HTML
+│   └── index.html     # Interface HTML da aplicação
 ├── static/
-│   └── style.css         # Estilo da interface
-├── ultimo_estado.txt     # Registro de última verificação
-└── README.md
+│   └── style.css      # Estilos da interface web
+├── ultimo_estado.txt  # Registro do último estado monitorado
+└── README.md          # Documentação do projeto
 
+```
 ---
 
 ## 💻 Tecnologias Utilizadas
