@@ -50,11 +50,11 @@ def verificar_atividade():
     estado_anterior = carregar_estado()
 
     if estado_atual != estado_anterior:
-        print("🔔 Mudança detectada!")
+        print("Mudanca detectada!")
         salvar_estado(estado_atual)
         # Aqui pode chamar notificação
     else:
-        print("Sem mudanças nas posições do navio.")
+        print("Sem mudancas nas posicoes do navio.")
 
 def loop_monitoramento():
     while monitorando:
