@@ -13,6 +13,7 @@ Ideal para agências marítimas, operadores portuários ou entusiastas que desej
   - **Atracados**
     
 📡 Verificação automática a cada 5 minutos.
+
 📬 Detecção de movimentações e mudanças de status.
 
 📋 Painel web com:
