@@ -7,16 +7,39 @@ Ideal para agências marítimas, operadores portuários ou entusiastas que desej
 
 ## 🔍 Funcionalidades
 
-- ✅ Monitoramento de navios específicos nas categorias:
+✅ Monitoramento de navios específicos nas categorias:
   - **Aguardados**
   - **Fundeados**
   - **Atracados**
-- 📡 Verificação automática a cada 5 minutos.
-- 📬 Detecção de movimentações e mudanças de status.
-- 📋 Painel web com:
+    
+📡 Verificação automática a cada 5 minutos.
+📬 Detecção de movimentações e mudanças de status.
+
+📋 Painel web com:
   - Status atual do navio monitorado.
   - Resumo das **últimas movimentações** de todos os navios listados na pauta de serviço.
-- 🔔 Preparado para integração com notificações por e-mail ou SMS.
+    
+🔔 Preparado para integração com notificações por e-mail ou SMS.
+
+---
+
+## 🧠 Como Funciona
+
+O usuário informa o nome do navio no formulário web.
+
+O sistema começa a monitorar sua presença nas páginas:
+
+/aguardados
+
+/fundeados
+
+/atracados
+
+A cada 5 minutos, o sistema:
+
+Recoleta os dados.
+Compara com a verificação anterior.
+Atualiza o painel e (futuramente) envia notificação.
 
 ---
 
@@ -45,9 +68,29 @@ vessel-monitor/
 
 ---
 
+## 📈 Futuras Melhorias
+Integração com serviços de envio de e-mail/SMS (Twilio, SMTP, etc)
+
+Histórico completo das mudanças
+
+Exportação de dados para CSV/PDF
+
+Monitoramento de múltiplos navios simultaneamente
+
+Gráficos e relatórios de movimentações
+
+---
+
 ## 📦 Instalação
 
 1. Clone o repositório:
-   ```bash
+```bash
    git clone https://github.com/DEVRHC/vessel-monitor.git
    cd vessel-monitor
+```
+   ---
+
+## 🧑‍💻 Autor
+Desenvolvido por [Rafael Honorato Cardoso] — Profissional de TI apaixonado por automação e dados em tempo real.
+📧 Contato: rafaelhcardoso1996@gmail.com
+📍 LinkedIn: linkedin.com/in/devrhc/
