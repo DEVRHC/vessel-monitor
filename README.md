@@ -93,5 +93,7 @@ Gráficos e relatórios de movimentações
 
 ## 🧑‍💻 Autor
 Desenvolvido por [Rafael Honorato Cardoso] — Profissional de TI apaixonado por automação e dados em tempo real.
+
 📧 Contato: rafaelhcardoso1996@gmail.com
+
 📍 LinkedIn: linkedin.com/in/devrhc/
