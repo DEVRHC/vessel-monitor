@@ -1,30 +1,30 @@
-# 🚢 Vessel Monitor — Monitoramento Inteligente de Navios
+#  Vessel Monitor — Monitoramento Inteligente de Navios
 
 **Vessel Monitor** é um sistema inteligente de monitoramento de navios que coleta e acompanha em tempo real a posição de embarcações listadas no site oficial da [RG Pilots](https://www.rgpilots.com.br/).  
 Ideal para agências marítimas, operadores portuários ou entusiastas que desejam receber atualizações automáticas sobre o status dos navios.
 
 ---
 
-## 🔍 Funcionalidades
+##  Funcionalidades
 
-✅ Monitoramento de navios específicos nas categorias:
+  Monitoramento de navios específicos nas categorias:
   - **Aguardados**
   - **Fundeados**
   - **Atracados**
     
-📡 Verificação automática a cada 5 minutos.
+  Verificação automática a cada 5 minutos.
 
-📬 Detecção de movimentações e mudanças de status.
+  Detecção de movimentações e mudanças de status.
 
-📋 Painel web com:
+  Painel web com:
   - Status atual do navio monitorado.
   - Resumo das **últimas movimentações** de todos os navios listados na pauta de serviço.
     
-🔔 Preparado para integração com notificações por e-mail ou SMS.
+  Preparado para integração com notificações por e-mail ou SMS.
 
 ---
 
-## 🧠 Como Funciona
+##  Como Funciona
 
 O usuário informa o nome do navio no formulário web.
 
@@ -44,7 +44,7 @@ Atualiza o painel e (futuramente) envia notificação.
 
 ---
 
-## 🛠️ Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```bash
 vessel-monitor/
@@ -60,7 +60,7 @@ vessel-monitor/
 ```
 ---
 
-## 💻 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **Python 3**
 - **Flask** — interface web leve
@@ -69,7 +69,7 @@ vessel-monitor/
 
 ---
 
-## 📈 Futuras Melhorias
+##  Futuras Melhorias
 Integração com serviços de envio de e-mail/SMS (Twilio, SMTP, etc)
 
 Histórico completo das mudanças
@@ -82,7 +82,7 @@ Gráficos e relatórios de movimentações
 
 ---
 
-## 📦 Instalação
+##  Instalação
 
 1. Clone o repositório:
 ```bash
@@ -93,9 +93,9 @@ Gráficos e relatórios de movimentações
 ```
    ---
 
-## 🧑‍💻 Autor
+##  Autor
 Desenvolvido por [Rafael Honorato Cardoso] — Profissional de TI apaixonado por automação e dados em tempo real.
 
-📧 Contato: rafaelhcardoso1996@gmail.com
+ Contato: rafaelhcardoso1996@gmail.com
 
-📍 LinkedIn: linkedin.com/in/devrhc/
+ LinkedIn: linkedin.com/in/devrhc/
